@@ -1,8 +1,11 @@
 package com.springboot.gonglueinterface.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class TestController {
-    
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello world!";
+    }
 }

@@ -1,66 +1,146 @@
 package com.springboot.gonglueinterface.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.Column;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Entity;
 import java.util.Date;
 
+/**
+* Create by Generate...
+* Date: Wed Jul 28 11:47:13 CST 2021
+* 
+* @author fhrdr
+*/
 @Entity
-@Table(schema = "travel_tips",name = "t_post")
+@Table(name = "t_post")
 public class Post {
 
-  @Id
-  private int id;
-  @Column(name = "name")
-  private String name;
-  @Column(name = "introduce")
-  private String introduce;
-  @Column(name = "user_Id")
-  private long userId;
-  @Column(name = "view_Num")
-  private long viewNum;
-  @Column(name = "like_Num")
-  private long likeNum;
-  @Column(name = "collection_Num")
-  private long collectionNum;
-  @Column(name = "share_Num")
-  private long shareNum;
-  @Column(name = "comment_Num")
-  private long commentNum;
-  @Column(name = "reward")
-  private long reward;
-  @Column(name = "total")
-  private long total;
-  @Column(name = "avatar")
-  private long avatar;
-  @Column(name = "state")
-  private String state;
-  @Column(name = "area")
-  private String area;
-  @Column(name = "address")
-  private String address;
-  @Column(name = "work_Time")
-  private String workTime;
-  @Column(name = "time_Style")
-  private String timeStyle;
-  @Column(name = "discount")
-  private String discount;
-  @Column(name = "tip")
-  private String tip;
-  @Column(name = "price")
-  private String price;
-  @Column(name = "create_Time")
-  private Date createTime;
+	/**
+	 * 帖子ID
+	 */
+	@Id
+	private String id;
+	/**
+	 * 帖子名
+	 */
+	@Column(name = "name" )
+	private String name;
+	/**
+	 * 帖子介绍
+	 */
+	@Column(name = "introdouce" )
+	private String introdouce;
+	/**
+	 * 作者id
+	 */
+	@Column(name = "user_id" )
+	private String userId;
+	/**
+	 * 帖子浏览数
+	 */
+	@Column(name = "view_num" )
+	private Long viewNum;
+	/**
+	 * 帖子点赞数
+	 */
+	@Column(name = "like_num" )
+	private Long likeNum;
+	/**
+	 * 帖子收藏数
+	 */
+	@Column(name = "collection_num" )
+	private Long collectionNum;
+	/**
+	 * 帖子分享数
+	 */
+	@Column(name = "share_num" )
+	private Long shareNum;
+	/**
+	 * 帖子评论数
+	 */
+	@Column(name = "comment_num" )
+	private Long commentNum;
+	/**
+	 * 帖子打赏数
+	 */
+	@Column(name = "reward" )
+	private Long reward;
+	/**
+	 * 帖子总分
+	 */
+	@Column(name = "total" )
+	private Long total;
+	/**
+	 * 帖子图片id
+	 */
+	@Column(name = "avatar" )
+	private String avatar;
+	/**
+	 * 帖子类别（0为草稿，1为发布）
+	 */
+	@Column(name = "state" )
+	private Boolean state;
+	/**
+	 * 帖子地域
+	 */
+	@Column(name = "area" )
+	private String area;
+	/**
+	 * 帖子详细地址
+	 */
+	@Column(name = "address" )
+	private String address;
+	/**
+	 * 帖子营业时间
+	 */
+	@Column(name = "work_time" )
+	private String workTime;
+	/**
+	 * 帖子时间类别
+	 */
+	@Column(name = "time_style" )
+	private String timeStyle;
+	/**
+	 * 帖子优惠政策
+	 */
+	@Column(name = "discount" )
+	private String discount;
+	/**
+	 * 实用小贴士
+	 */
+	@Column(name = "tip" )
+	private String tip;
+	/**
+	 * 景区价格
+	 */
+	@Column(name = "price" )
+	private String price;
+	/**
+	 * 线路
+	 */
+	@Column(name = "road" )
+	private String road;
+	/**
+	 * 帖子分类id
+	 */
+	@Column(name = "sort_id" )
+	private String sortId;
+	/**
+	 * 帖子创建时间
+	 */
+	@Column(name = "create_time" )
+	private Date createTime;
 
 
-  public int getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(int id) {
+  public void setId(String id) {
     this.id = id;
   }
+
 
   public String getName() {
     return name;
@@ -71,101 +151,101 @@ public class Post {
   }
 
 
-  public String getIntroduce() {
-    return introduce;
+  public String getIntrodouce() {
+    return introdouce;
   }
 
-  public void setIntroduce(String introduce) {
-    this.introduce = introduce;
+  public void setIntrodouce(String introdouce) {
+    this.introdouce = introdouce;
   }
 
 
-  public long getUserId() {
+  public String getUserId() {
     return userId;
   }
 
-  public void setUserId(long userId) {
+  public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
-  public long getViewNum() {
+  public Long getViewNum() {
     return viewNum;
   }
 
-  public void setViewNum(long viewNum) {
+  public void setViewNum(Long viewNum) {
     this.viewNum = viewNum;
   }
 
 
-  public long getLikeNum() {
+  public Long getLikeNum() {
     return likeNum;
   }
 
-  public void setLikeNum(long likeNum) {
+  public void setLikeNum(Long likeNum) {
     this.likeNum = likeNum;
   }
 
 
-  public long getCollectionNum() {
+  public Long getCollectionNum() {
     return collectionNum;
   }
 
-  public void setCollectionNum(long collectionNum) {
+  public void setCollectionNum(Long collectionNum) {
     this.collectionNum = collectionNum;
   }
 
 
-  public long getShareNum() {
+  public Long getShareNum() {
     return shareNum;
   }
 
-  public void setShareNum(long shareNum) {
+  public void setShareNum(Long shareNum) {
     this.shareNum = shareNum;
   }
 
 
-  public long getCommentNum() {
+  public Long getCommentNum() {
     return commentNum;
   }
 
-  public void setCommentNum(long commentNum) {
+  public void setCommentNum(Long commentNum) {
     this.commentNum = commentNum;
   }
 
 
-  public long getReward() {
+  public Long getReward() {
     return reward;
   }
 
-  public void setReward(long reward) {
+  public void setReward(Long reward) {
     this.reward = reward;
   }
 
 
-  public long getTotal() {
+  public Long getTotal() {
     return total;
   }
 
-  public void setTotal(long total) {
+  public void setTotal(Long total) {
     this.total = total;
   }
 
 
-  public long getAvatar() {
+  public String getAvatar() {
     return avatar;
   }
 
-  public void setAvatar(long avatar) {
+  public void setAvatar(String avatar) {
     this.avatar = avatar;
   }
 
 
-  public String getState() {
+  public Boolean getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(Boolean state) {
     this.state = state;
   }
 
@@ -232,6 +312,25 @@ public class Post {
     this.price = price;
   }
 
+
+  public String getRoad() {
+    return road;
+  }
+
+  public void setRoad(String road) {
+    this.road = road;
+  }
+
+
+  public String getSortId() {
+    return sortId;
+  }
+
+  public void setSortId(String sortId) {
+    this.sortId = sortId;
+  }
+
+
   public Date getCreateTime() {
     return createTime;
   }
@@ -240,30 +339,4 @@ public class Post {
     this.createTime = createTime;
   }
 
-  @Override
-  public String toString() {
-    return "{" +
-            "id:" + id +
-            ", name:'" + name + '\'' +
-            ", introduce:'" + introduce + '\'' +
-            ", userId:" + userId +
-            ", viewNum:" + viewNum +
-            ", likeNum:" + likeNum +
-            ", collectionNum:" + collectionNum +
-            ", shareNum:" + shareNum +
-            ", commentNum:" + commentNum +
-            ", reward:" + reward +
-            ", total:" + total +
-            ", avatar:" + avatar +
-            ", state:'" + state + '\'' +
-            ", area:'" + area + '\'' +
-            ", address:'" + address + '\'' +
-            ", workTime:'" + workTime + '\'' +
-            ", timeStyle:'" + timeStyle + '\'' +
-            ", discount:'" + discount + '\'' +
-            ", tip:'" + tip + '\'' +
-            ", price:'" + price + '\'' +
-            ", createTime:" + createTime +
-            '}';
-  }
 }

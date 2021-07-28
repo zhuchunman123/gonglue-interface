@@ -1,11 +1,8 @@
 package com.springboot.gonglueinterface.service;
 
+import org.springframework.stereotype.Service;
 
-import com.springboot.gonglueinterface.entity.Post;
-
+@Service
 public interface PostService {
-    // 获取一个帖子
-    public String getPost(int id);
 
-    void save(Post post);
 }

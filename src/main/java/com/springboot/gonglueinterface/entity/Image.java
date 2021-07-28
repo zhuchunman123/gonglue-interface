@@ -1,38 +1,71 @@
 package com.springboot.gonglueinterface.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.Column;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Entity;
 import java.util.Date;
 
+/**
+* Create by Generate...
+* Date: Wed Jul 28 11:48:07 CST 2021
+* 
+* @author fhrdr
+*/
 @Entity
-@Table(schema = "travel_tips",name = "t_image")
+@Table(name = "t_image")
 public class Image {
 
-  @Id
-  private int id;
-  @Column(name = "name")
-  private String name;
-  @Column(name = "size")
-  private String size;
-  @Column(name = "path")
-  private String path;
-  @Column(name = "type")
-  private String type;
-  @Column(name = "user_Id")
-  private long userId;
-  @Column(name = "create_Time")
-  private Date createTime;
+	/**
+	 * 图片id
+	 */
+	@Id
+	private String id;
+	/**
+	 * 图片名字
+	 */
+	@Column(name = "name" )
+	private String name;
+	/**
+	 * 图片大小
+	 */
+	@Column(name = "size" )
+	private String size;
+	/**
+	 * 图片地址
+	 */
+	@Column(name = "path" )
+	private String path;
+	/**
+	 * 图片格式
+	 */
+	@Column(name = "type" )
+	private String type;
+	/**
+	 * 图片集
+	 */
+	@Column(name = "close" )
+	private String close;
+	/**
+	 * 发布者id
+	 */
+	@Column(name = "user_id" )
+	private String userId;
+	/**
+	 * 发布时间
+	 */
+	@Column(name = "create_time" )
+	private Date createTime;
 
 
-  public int getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(int id) {
+  public void setId(String id) {
     this.id = id;
   }
+
 
   public String getName() {
     return name;
@@ -70,13 +103,23 @@ public class Image {
   }
 
 
-  public long getUserId() {
+  public String getClose() {
+    return close;
+  }
+
+  public void setClose(String close) {
+    this.close = close;
+  }
+
+
+  public String getUserId() {
     return userId;
   }
 
-  public void setUserId(long userId) {
+  public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   public Date getCreateTime() {
     return createTime;
@@ -85,4 +128,5 @@ public class Image {
   public void setCreateTime(Date createTime) {
     this.createTime = createTime;
   }
+
 }

@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class PostController {
+public class LooperController {
 
-    @GetMapping("/get_post")
-    public ResponseResult getPost(){
-        return null;
+    @GetMapping("/get_looper")
+    public ResponseResult getLooper(){
+
+        return ResponseResult.SUCCESS();
     }
 }
